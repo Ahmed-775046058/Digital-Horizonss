@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تصميم مواقع وتسويق رقمي احترافي | آفاق ديجيتال</title>
+  <!-- وصف الصفحة لمحركات البحث -->
+<meta name="description" content="آفاق ديجيتال - شركة رائدة في التسويق الرقمي وتصميم المواقع وتحسين محركات البحث في السعودية واليمن. حلول رقمية مبتكرة لنجاح أعمالك.">
+
+<!-- الكلمات المفتاحية (اختيارية) -->
+<meta name="keywords" content="آفاق ديجيتال, تسويق رقمي, تصميم مواقع, تحسين محركات البحث, SEO, السعودية, اليمن, حملات إعلانية, متجر إلكتروني">
+
+<!-- اسم الكاتب أو الشركة -->
+<meta name="author" content="Afaq Digital | آفاق ديجيتال">
+
+<meta name="author" content="Afaq Digital | آفاق ديجيتال">
+<link rel="icon" type="image/png" sizes="32x32" href="2.png">
+<link rel="icon" type="image/jpg" sizes="16x16" href="1.jpg">
+<link rel="shortcut icon" href="1.jpg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    :root {
+      --clr-primary: #4FE3C1;
+      --clr-secondary: #1A0F3B;
+      --clr-light: #FFFFFF;
+      --clr-accent: #FF8906;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Cairo', sans-serif; background: var(--clr-light); color: var(--clr-secondary); }
+    a { text-decoration: none; }
+
+    /* Header */
+    header { position: sticky; top: 0; z-index: 100; background: var(--clr-light); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .container { max-width: 1200px; margin: auto; padding: 0 1rem; position: relative; display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; cursor: pointer; }
+    .logo img { height: 60px; width: 60px; border-radius: 50%; padding: 5px; transition: transform .3s ease; }
+    .logo img:hover { transform: scale(1.1); }
+    .logo span { font-size: 1.75rem; font-weight: 800; color: var(--clr-secondary); margin-left: 1rem; }
+    nav.desktop { display: flex; gap: 2rem; font-weight: 600; justify-content: center; flex-grow: 1; }
+    nav.desktop a { padding: .5rem .75rem; color: var(--clr-secondary); transition: color .3s; }
+    nav.desktop a:hover { color: var(--clr-primary); }
+
+    /* Mobile Hamburger */
+    #mobile-toggle { display: none; font-size: 2rem; color: var(--clr-secondary); background: none; border: none; cursor: pointer; }
+    #mobile-menu { overflow: hidden; max-height: 0; transition: max-height .5s ease-in-out; }
+    #mobile-menu.show { max-height: 300px; }
+    #mobile-menu a { display: block; padding: .75rem 0; color: var(--clr-secondary); border-bottom: 1px solid #eee; }
+
+    @media (max-width: 768px) {
+      nav.desktop { display: none; }
+      #mobile-toggle { display: block; }
+    }
+    @media (min-width: 769px) {
+      #mobile-toggle { display: none; }
+      #mobile-menu { display: none !important; }
+    }
+
+    /* Social Icons */
+    .social-call, .social-whatsapp {
+      position: fixed; /* تغير من absolute إلى fixed */
+      bottom: 1rem; /* تحديد المسافة من الأسفل */
+      z-index: 1000; /* التأكد من أنها تظهر فوق المحتوى */
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .5rem 1rem;
+      background: var(--clr-primary);
+      color: var(--clr-light);
+      border-radius: 9999px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform .3s;
+    }
+    .social-call { left: 1rem; }
+    .social-call:hover { transform: translateX(-5px) scale(1.05); }
+    .social-whatsapp {
+      right: 1rem;
+      background: var(--clr-accent);
+    }
+    .social-whatsapp:hover { transform: translateX(5px) scale(1.05); }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); color: var(--clr-light); text-align: center; padding: 6rem 1rem; }
+    .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
+    .hero blockquote { font-size: 1.5rem; font-style: italic; opacity: .9; margin-bottom: 1rem; }
+    .hero p { max-width: 700px; margin: auto; font-size: 1.125rem; line-height: 1.6; margin-bottom: 2rem; }
+    .hero ul { max-width: 600px; margin: auto; list-style: none; margin-bottom: 2rem; padding: 0; }
+    .hero ul li { display: flex; align-items: flex-start; gap: .5rem; margin-bottom: .75rem; }
+    .hero ul li i { color: var(--clr-accent); margin-top: .25rem; }
+    .btn-primary { padding: .75rem 2rem; background: var(--clr-light); color: var(--clr-secondary); border-radius: 9999px; font-weight: 600; transition: transform .3s; }
+    .btn-primary:hover { transform: scale(1.05); }
+
+    /* Services */
+    #services { padding: 4rem 1rem; background: var(--clr-light); }
+    #services h2 { text-align: center; font-size: 2.25rem; font-weight: 800; color: var(--clr-secondary); margin-bottom: 3rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto; }
+    .card { background: var(--clr-light); border-radius: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center; padding: 2rem 1rem; transition: transform .3s, background .3s, color .3s; position: relative; overflow: hidden; }
+    .card lottie-player { width: 140px; height: 140px; margin:auto; transition: transform .3s ease; }
+    .card h3 { margin-top: 1rem; font-size: 1.25rem; color: var(--clr-primary); }
+    .card p.tagline { margin-top: .5rem; font-size: .95rem; color: #555; }
+    .card:hover { transform: translateY(-10px); background: var(--clr-primary); color: var(--clr-light); }
+    .card:hover lottie-player { transform: scale(1.05); }
+    .card:hover h3, .card:hover p.tagline { color: var(--clr-light); }
+
+    .overlay {
+      position: absolute; inset: 0;
+      background: var(--clr-secondary);
+      color: var(--clr-light);
+      opacity: 0;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      padding: 1.5rem;
+      line-height: 1.4;
+      transition: opacity .3s ease;
+    }
+    .card:hover .overlay { opacity: .95; }
+
+    /* Footer */
+    footer { background: var(--clr-secondary); color: var(--clr-light); padding: 2rem 1rem; text-align: center; }
+    footer p { margin: .5rem 0; font-size: .875rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="1.jpg" alt="Logo" />
+        <span>آفاق ديجيتال</span>
+      </div>
+      <nav class="desktop">
+        <a href="1.html">الرئيسية</a>
+        <a href="2.html">من نحن</a>
+        <a href="3.html">خدماتنا</a>
+        <a href="4.html">مدونتنا</a>
+        <a href="5.html">تواصل</a>
+      </nav>
+      <button id="mobile-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+    </div>
+    <nav id="mobile-menu">
+        <a href="1.html">الرئيسية</a>
+        <a href="2.html">من نحن</a>
+        <a href="3.html">خدماتنا</a>
+        <a href="4.html">مدونتنا</a>
+        <a href="5.html">تواصل</a>
+
+    </nav>
+  </header>
+<!-- Social Icons at the Bottom -->
+<a href="tel:+967775046058" class="social-call">
+  <i class="fas fa-phone"></i><span>اتصال</span>
+</a>
+<a href="https://wa.me/967775046058" target="_blank" class="social-whatsapp">
+  <i class="fab fa-whatsapp"></i><span>واتساب</span>
+</a>
+
+
+
+
+
+
+<section id="blog-intro" style="padding: 5rem 1rem; background: var(--clr-light); direction: rtl;">
+    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 3rem; max-width: 1200px; margin: auto; flex-wrap: wrap;">
+  
+      <!-- النص -->
+      <div style="flex: 1; min-width: 300px;">
+        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--clr-secondary); margin-bottom: 1rem;">مدونتنا</h2>
+        <p style="font-size: 1.1rem; line-height: 2; color: var(--clr-secondary);">
+          مرحبًا بك في مدونة <strong>آفاق ديجيتال</strong>، حيث نقدم لك مقالات مميزة ومفيدة حول عالم التصميم والتسويق الإلكتروني. تستضيف مدونتنا مجموعة متنوعة من المقالات التي تغطي أحدث الاتجاهات في عالم الرقميات، نصائح فعالة لتحسين تجربة المستخدم، واستراتيجيات تسويقية مبتكرة لتعزيز وجودك الرقمي.
+        </p>
+        <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+          <a href="#services" style="padding: .75rem 2rem; background: transparent; border: 2px solid var(--clr-secondary); color: var(--clr-secondary); border-radius: 9999px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all .3s;">
+            خدماتنا
+          </a>
+          <a href="#contact" style="padding: .75rem 2rem; background: var(--clr-secondary); color: var(--clr-light); border-radius: 9999px; font-weight: bold; font-size: 1rem; text-decoration: none; transition: background .3s;">
+            اطلب الآن
+          </a>
+        </div>
+      </div>
+  
+      <!-- صورة متحركة -->
+      <div style="flex: 1; min-width: 300px; text-align: center;">
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+        <dotlottie-player src="https://lottie.host/166869d5-f9e4-4f83-aa58-cc35f1092b43/rTlFyDSekd.lottie" background="transparent" speed="1" style="width: 100%; max-width: 400px; height: auto;" loop autoplay></dotlottie-player>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <section id="blog-posts" style="padding: 5rem 1rem; background: var(--clr-light); text-align: center;">
+    <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--clr-secondary); margin-bottom: 3rem;">مقالاتنا</h2>
+  
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; max-width: 1200px; margin: auto;">
+  
+      <!-- مقال 1 -->
+      <div style="width: 320px; background: #fff; border-radius: 1rem; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); text-align: right;">
+        <img src="0.jpg" alt="ميديا باير" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 1.5rem;">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--clr-secondary); margin-bottom: .75rem;">
+            أفضل ميديا باير بالرياض: 775046058 | دليلك لاختيار الأفضل
+          </h3>
+          <p style="font-size: 0.95rem; color: #555;">إذا كنت تبحث عن أفضل ميديا باير بالرياض لإدارة حملاتك الإعلانية وتحقيق أقصى عائد استثمار، فقد وصلت إلى المكان الصحيح.</p>
+        </div>
+      </div>
+  
+      <!-- مقال 2 -->
+      <div style="width: 320px; background: #fff; border-radius: 1rem; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); text-align: right;">
+        <img src="0.jpg" alt="التسويق الإلكتروني" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 1.5rem;">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--clr-secondary); margin-bottom: .75rem;">
+            خدمات التسويق الإلكتروني في الرياض: 775046058 | كيف يساعدك الكون الرقمي في تحقيق النجاح؟
+          </h3>
+          <p style="font-size: 0.95rem; color: #555;">في عصر التحول الرقمي، أصبحت خدمات التسويق الإلكتروني أداة لا غنى عنها لتوسيع نطاق أعمالك وتحقيق النجاح.</p>
+        </div>
+      </div>
+  
+      <!-- مقال 3 -->
+      <div style="width: 320px; background: #fff; border-radius: 1rem; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); text-align: right;">
+        <img src="0.jpg" alt="شركة تسويق" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 1.5rem;">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--clr-secondary); margin-bottom: .75rem;">
+            أفضل شركة تسويق رقمي بالرياض: 775046058 | لماذا آفاق ديجيتال هو خيارك الأمثل؟
+          </h3>
+          <p style="font-size: 0.95rem; color: #555;">في عالم يتسارع فيه التحول الرقمي، أصبحت الحاجة إلى شريك موثوق في مجال التسويق ضرورة لكل عمل تجاري.</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
+  <section id="cta" style="background-color: #121D40; color: #FFFFFF; padding: 5rem 2rem; border-radius: 2rem 2rem 0 0; text-align: center;">
+    <div style="max-width: 900px; margin: auto; font-size: 1.2rem; line-height: 2.1; font-weight: 400;">
+      <h2 style="font-size: 2.5rem; font-weight: 800; color: #4FE3C1; margin-bottom: 2rem;">اطلب الآن</h2>
+  
+      في <strong>آفاق ديجيتال</strong>، نأخذ بيد أعمالك نحو التميز من خلال حلول تسويقية رقمية متقدمة ومخصصة بدقة. سواء كنت تطمح لزيادة عدد العملاء، أو تعزيز الحضور الرقمي، أو تحسين العائد من الإعلانات، فإننا نملك الخبرة والأدوات لتصميم حملاتك بناءً على بيانات حقيقية وتحليل سلوك جمهورك المستهدف. باستخدام أحدث تقنيات الإعلان الرقمي، نساعدك في الوصول الفعّال لعملائك عبر قنوات مثل جوجل، فيسبوك، إنستغرام وغيرها، ونوفر تقارير أداء دقيقة تساعدك على اتخاذ قرارات مدروسة.
+      
+      <br><br>
+  
+      لأننا نعرف أن كل مشروع له بصمته الخاصة، نقدم عروض أسعار مخصصة، ونرافقك في كل خطوة من الحملة بدءًا من الفكرة حتى التنفيذ والتحليل.
+  
+      <br><br>
+  
+      تواصل معنا الآن عبر واتساب على الرقم 
+      <a href="https://wa.me/967775046058" target="_blank" style="color: #FF8906; font-weight: bold; text-decoration: underline;">+967775046058</a>
+      وانضم إلى نخبة من العملاء الذين لمسوا الفرق معنا.
+    </div>
+  </section>
+  
+
+
+
+<!-- Why Afaq Digital Section -->
+<section style="background: var(--clr-secondary); color: var(--clr-light); padding: 5rem 1rem; text-align: center;">
+    <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">لماذا آفاق ديجيتال؟</h2>
+    <p style="max-width: 700px; margin: auto; margin-bottom: 3rem; font-size: 1.125rem; line-height: 1.8;">
+      في آفاق ديجيتال، نجمع بين الإبداع، الجودة، والتقنيات الحديثة لنمنح عملاءنا حلولاً رقمية متكاملة تضمن لهم التميز في عالم المنافسة الرقمية.
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;">
+      <!-- Card 1 -->
+      <div style="padding: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 1rem; transition: transform .3s;">
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  
+       <center> <dotlottie-player src="https://lottie.host/619b6547-f685-4dc9-b85f-75cc66e893a4/jpw8AESEtt.lottie" background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay></dotlottie-player></center>
+        <h3 style="margin-top: 1rem;">الإبداع</h3>
+        <p style="font-size: 0.95rem; margin-top: 0.5rem;">نبتكر حلول رقمية فريدة تعكس هوية عملك بأسلوب مبتكر وجذاب.</p>
+      </div>
+  
+      <!-- Card 2 -->
+      <div style="padding: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 1rem; transition: transform .3s;">
+        <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_tno6cg2w.json" background="transparent" speed="1" style="width: 100px; height: 100px; margin:auto;" loop autoplay></lottie-player>
+        <h3 style="margin-top: 1rem;">الجودة</h3>
+        <p style="font-size: 0.95rem; margin-top: 0.5rem;">نلتزم بأعلى معايير الجودة لضمان نتائج تفوق توقعاتك.</p>
+      </div>
+  
+      <!-- Card 3 -->
+      <div style="padding: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 1rem; transition: transform .3s;">
+        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_jtbfg2nb.json" background="transparent" speed="1" style="width: 100px; height: 100px; margin:auto;" loop autoplay></lottie-player>
+        <h3 style="margin-top: 1rem;">التميّز</h3>
+        <p style="font-size: 0.95rem; margin-top: 0.5rem;">نضمن لك التفوق في السوق الرقمي بخدمات احترافية واستراتيجيات مدروسة.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+<!-- Contact Section -->
+<section id="contact" style="background: var(--clr-light); padding: 5rem 1rem; text-align: center; border-top: 6px solid var(--clr-secondary);">
+    <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--clr-secondary); margin-bottom: 1rem;">تواصل معنا</h2>
+    <p style="max-width: 700px; margin: auto; margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8; color: #555;">
+      في <strong>آفاق ديجيتال</strong>، لا نؤمن فقط بالخدمة، بل بالشراكة. إذا كانت لديك فكرة، مشروع، أو حتى مجرد استفسار — نحن هنا لنصغي ونقدّم لك الحلول الإبداعية التي تستحقها. تواصل معنا الآن لنبدأ بتحويل طموحاتك إلى واقع رقمي احترافي.
+    </p>
+  
+    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+      <a href="tel:+967776363538" style="padding: .75rem 2rem; background: var(--clr-secondary); color: var(--clr-light); border-radius: 9999px; font-weight: 600; font-size: 1rem; transition: background .3s;">
+        <i class="fas fa-phone-alt" style="margin-left: .5rem;"></i> جوال
+      </a>
+      <a href="https://wa.me/967776363538" target="_blank" style="padding: .75rem 2rem; background: var(--clr-light); color: var(--clr-secondary); border: 2px solid var(--clr-secondary); border-radius: 9999px; font-weight: 600; font-size: 1rem; transition: all .3s;">
+        <i class="fab fa-whatsapp" style="margin-left: .5rem;"></i> واتساب
+      </a>
+    </div>
+  </section>
+  
+ <!-- Footer -->
+ <!-- Footer Section -->
+ <footer style="background: #1A1F36; color: var(--clr-light); padding: 4rem 1rem;">
+    <div style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: right; align-items: start;">
+  
+      <!-- Logo & About -->
+      <div>
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+          <img src="2.png" alt="آفاق ديجيتال" style="height: 100px; margin-left: 10px;">
+          <h3 style="font-size: 1.75rem; font-weight: 800;">آفاق ديجيتال</h3>
+        </div>
+        <p style="line-height: 1.8; font-size: 0.95rem; color: #ccc;">
+          مؤسسة رائدة في تقديم حلول رقمية مبتكرة تجمع بين الإبداع والتقنية لتمكين عملائنا من تحقيق التميز الرقمي وزيادة نمو أعمالهم بفعالية.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: .75rem;">روابط سريعة</h4>
+        <ul style="list-style: none; padding: 0; font-size: 0.95rem;">
+          <li><a href="#hero" style="color: #ccc; text-decoration: none;">الرئيسية</a></li>
+          <li><a href="#services" style="color: #ccc; text-decoration: none;">خدماتنا</a></li>
+          <li><a href="#contact" style="color: #ccc; text-decoration: none;">تواصل معنا</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div>
+        <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: .75rem;">معلومات التواصل</h4>
+        <p style="font-size: 0.95rem;">📞 جوال: 
+          <a href="tel:+967775046058" style="color: var(--clr-primary); text-decoration: none;">+967775046058</a>
+        </p>
+        <p style="font-size: 0.95rem;">💬 واتساب: 
+          <a href="https://wa.me/967775046058" target="_blank" style="color: var(--clr-accent); text-decoration: none;">تواصل معنا مباشرة</a>
+        </p>
+      </div>
+    </div>
+  
+    <!-- Bottom Bar -->
+    <div style="text-align: center; margin-top: 3rem; font-size: .85rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; color: #aaa;">
+      © 2025 آفاق ديجيتال - جميع الحقوق محفوظة
+    </div>
+  </footer>
+  
+  
+  
+  <!-- زر الرجوع إلى الأعلى -->
+  <a href="#" class="scroll-top" id="scrollTopBtn">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  
+  <style>
+    .scroll-top {
+      position: fixed;
+      bottom: 4rem;   /* رفع السهم للأعلى */
+      right: 1rem;
+      background: var(--clr-secondary);
+      color: var(--clr-light);
+      padding: 0.75rem;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+      display: none;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+  
+    .scroll-top:hover {
+      background: var(--clr-primary);
+    }
+  </style>
+  
+  
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('show');
+      }
+    </script>
+  
+  
+  
+  <script>
+    // إظهار الزر عند التمرير لأسفل
+  window.onscroll = function() {
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+  
+  // حركة الرجوع للأعلى
+  document.getElementById("scrollTopBtn").addEventListener("click", function(e){
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
+  </script>
+  </body>
+  </html>
+  
